@@ -38,7 +38,9 @@ class App extends React.Component {
       <div className="container">
         <Scoreboard scores={scores} />
 
-        <BowlingAlley ref={this.bowlingAlleyRef} />
+        <div class="bowling-alley-container">
+          <BowlingAlley ref={this.bowlingAlleyRef} />
+        </div>
 
         <div className="buttons">
           <RollButton handleRoll={this.handleRoll} />
