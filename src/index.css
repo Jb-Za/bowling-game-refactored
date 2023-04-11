@@ -1,13 +1,211 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: sans-serif;
+  display: inline;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.container {
+  max-height: 9.5rem;
+}
+
+#canvas-container {
+  width: 100%;
+  text-align: center;
+}
+
+.bowlingGame {
+  padding-top: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 25rem;
+  height: 70vh;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+}
+
+.buttons {
+  padding-top: 0.4rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  transform-origin: bottom;
+  justify-content: space-around;
+  align-items: flex-start;
+  transform: translate(0, 35vh);
+  align-content: stretch;
+}
+
+@media screen and (max-width: 480px) {
+  .bowlingGame {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 25rem;
+    height: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .bowlingGame {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 25rem;
+    height: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .bowlingGame {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 25rem;
+    height: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .bowlingGame {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 25rem;
+    height: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (max-height: 590px) {
+  .bowlingGame {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 25rem;
+    height: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (max-height: 380px) {
+  .bowlingGame {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 25rem;
+    height: 30vh;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .buttons {
+    padding-top: 0.4rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    transform-origin: bottom;
+    justify-content: center;
+    align-items: flex-end;
+    transform: translate(0, 65vh);
+  }
+}
+
+@media screen and (max-height: 590px) {
+  .buttons {
+    padding-top: 0.4rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    transform-origin: left;
+    justify-content: space-around;
+    align-items: flex-start;
+    transform: translate(10%, 35%);
+    align-content: space-around;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .buttons {
+    padding-top: 0.4rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    transform-origin: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: translate(15%, 5vh);
+
+    align-content: space-around;
+    flex-direction: column;
+  }
+
+  .bowlingGame {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: inherit;
+    height: 70vh;
+    transform-origin: top;
+  }
+}
+
+@media screen and (min-height: 600px) {
+  .bowlingGame {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 20rem;
+    height: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .bowlingGame {
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 20rem;
+    height: 70vh;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
 }

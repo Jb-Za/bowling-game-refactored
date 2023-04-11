@@ -1,0 +1,27 @@
+.button {
+  background-color: #363e46;
+  color: white;
+  border: none;
+  border-radius: 0.5 rem;
+  padding: 1rem 2rem;
+  margin: 0.1rem 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 8rem;
+}
+
+.button:hover {
+  background-color: #737e89;
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    bottom: 5%;
+    vertical-align: bottom;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .button {
+  }
+}

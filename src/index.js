@@ -1,17 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import Scoreboard from "./components/Scoreboard.js";
+import Game from "./Game.js";
+import registerServiceWorker from "./registerServiceWorker";
+import BowlingAlley from "./components/bowlingAlley";
+import RollButton from "./components/RollButton";
+import ResetButton from "./components/ResetButton";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scores: [],
+    };
+    this.bowlingAlleyRef = React.createRef();
+    this.game = Game.create(this.bowlingAlleyRef);
+  }
+
+  handleRoll = () => {
+    this.game.simulatePlayer();
+
+    this.setState({ scores: this.game.score() });
+  };
+
+  handleReset = () => {
+    this.game.reset();
+
+    this.setState({ scores: this.game.score() });
+  };
+
+  render() {
+    const { scores } = this.state;
+
+    return (
+      <div className="container">
+        <Scoreboard scores={scores} />
+
+        <BowlingAlley ref={this.bowlingAlleyRef} />
+
+        <div className="buttons">
+          <RollButton handleRoll={this.handleRoll} />
+          <ResetButton handleReset={this.handleReset} />
+        </div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+registerServiceWorker();
